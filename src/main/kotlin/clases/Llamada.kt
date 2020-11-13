@@ -19,4 +19,13 @@ abstract class Llamada(val duracion:Int,val fecha:LocalDateTime,val ubicacionDes
     }
 
     abstract fun costoPorMinuto():Double
+
+    fun toShow():String{
+        return(
+            "---------------------------------------------------------------------\n" +
+            "Duracion: $duracion min \t " +
+            "Destino de llamada: ${ubicacionDestino.nombre} \t" +
+            "Total: ${costoTotal()}$\n")
+
+    }
 }

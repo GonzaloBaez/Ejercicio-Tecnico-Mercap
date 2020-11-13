@@ -3,7 +3,7 @@ package clases
 import java.time.Month
 import java.util.*
 
-class Facturacion(var valorAbonoMensual:Double,val cliente: Cliente,val mesDeFacturacion: Month,val anioDeFacturacion:Int) {
+class Facturacion(val cliente: Cliente,var valorAbonoMensual:Double,val mesDeFacturacion: Month,val anioDeFacturacion:Int) {
 
 
 

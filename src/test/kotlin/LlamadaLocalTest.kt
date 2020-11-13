@@ -24,7 +24,7 @@ class LlamadaLocalTest {
     fun seRealizadaUnaLlamadaEnDiaNoHabilYHorarioHabil(){
         val ubicacion = Ubicacion("quilmes",1.0)
 
-        // se realizo un viernes, dia habil, pero fuera del horario habil
+
         val fechaDeLlamada = LocalDateTime.of(2020,Month.NOVEMBER,14,8,14)
         val llamada = LlamadaLocal(100,fechaDeLlamada,ubicacion)
 
@@ -33,10 +33,11 @@ class LlamadaLocalTest {
 
     }
 
+    @Test
     fun seRealizadaUnaLlamadaEnDiaHabilYHorarioHabil(){
         val ubicacion = Ubicacion("quilmes",1.0)
 
-        // se realizo un viernes, dia habil, pero fuera del horario habil
+
         val fechaDeLlamada = LocalDateTime.of(2020,Month.NOVEMBER,13,8,0)
         val llamada = LlamadaLocal(1000,fechaDeLlamada,ubicacion)
 
