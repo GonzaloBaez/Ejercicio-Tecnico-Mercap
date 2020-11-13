@@ -1,21 +1,32 @@
 package clases
 
+import java.time.Month
 import java.util.*
 
-class Facturacion(var valorAbonoMensual:Double) {
+class Facturacion(var valorAbonoMensual:Double,val cliente: Cliente,val mesDeFacturacion: Month,val anioDeFacturacion:Int) {
 
-    var llamadasRealizadas:MutableList<Llamada> = mutableListOf()
+
 
 
     fun realizarFacturacion():Double{
+        var costoParcial = valorAbonoMensual
+        for(llamada in cliente.llamadasRealizadas){
+            costoParcial += costoDeLlamadaSiEsDelMes(llamada)
+        }
+        return costoParcial
+    }
+
+
+    private fun costoDeLlamadaSiEsDelMes(llamada: Llamada):Double{
         var costoParcial = 0.0
-        for(llamada in llamadasRealizadas){
+        if(llamadaEsDelMesYAnioDeFacturacion(llamada)){
             costoParcial += llamada.costoTotal()
         }
         return costoParcial
     }
 
-    fun agregarLlamadaNueva(llamada:Llamada){
-        llamadasRealizadas.add(llamada)
+    private fun llamadaEsDelMesYAnioDeFacturacion(llamada: Llamada):Boolean{
+        return llamada.esDelMesYAnioDeFacturacion(mesDeFacturacion,anioDeFacturacion)
     }
+
 }

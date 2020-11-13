@@ -30,9 +30,9 @@ class LlamadaLocalTest {
 
         Assert.assertEquals(0.10,llamada.costoPorMinuto(),1e-15)
         Assert.assertEquals(10.0,llamada.costoTotal(),1e-15)
+
     }
 
-    @Test
     fun seRealizadaUnaLlamadaEnDiaHabilYHorarioHabil(){
         val ubicacion = Ubicacion("quilmes",1.0)
 
@@ -43,4 +43,5 @@ class LlamadaLocalTest {
         Assert.assertEquals(0.20,llamada.costoPorMinuto(),1e-15)
         Assert.assertEquals(200.0,llamada.costoTotal(),1e-15)
     }
+
 }
