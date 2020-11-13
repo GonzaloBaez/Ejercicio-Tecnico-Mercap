@@ -1,12 +1,9 @@
 import clases.*
-import org.junit.After
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
-import org.junit.jupiter.api.assertThrows
 import java.time.LocalDateTime
 import java.time.Month
-import java.util.*
 
 
 class FacturacionTest {
@@ -26,14 +23,6 @@ class FacturacionTest {
     lateinit var ubicacion4 :Ubicacion
     lateinit var fechaDeLlamada4 :LocalDateTime
     lateinit var llamada4:Llamada
-
-    lateinit var ubicacion5:Ubicacion
-    lateinit var fechaDeLlamada5:LocalDateTime
-    lateinit var llamada5:Llamada
-
-    lateinit var ubicacion6 :Ubicacion
-    lateinit var fechaDeLlamada6 :LocalDateTime
-    lateinit var llamada6:Llamada
 
     lateinit var cliente:Cliente
 

@@ -1,7 +1,6 @@
 package clases
 
 import java.time.LocalDateTime
-import java.util.*
 
 class LlamadaLocal(duracion:Int, fecha: LocalDateTime, ubicacionDestino:Ubicacion): Llamada(duracion,fecha,ubicacionDestino) {
 
